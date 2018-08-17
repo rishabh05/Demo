@@ -23,12 +23,14 @@
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
         </activity>
 
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
         </activity>
     </application>

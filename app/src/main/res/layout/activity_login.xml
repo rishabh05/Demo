@@ -108,7 +108,7 @@
                 android:background="@drawable/round_btn_drawable_white"
                 android:text="@string/PFCommonLogin"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/dim_leftpanel_default_textsize_large" />
 
             <TextView
@@ -137,13 +137,13 @@
     </RelativeLayout>
 
 
-    <com.eworkplaceapps.ed.view.ProgressWheel
+    <ProgressBar
         android:id="@+id/loading"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:visibility="gone"
-        wheel:matProg_barColor="@color/lightGrey"
-        wheel:matProg_progressIndeterminate="true" />
+ />
+
 </RelativeLayout>

@@ -2,6 +2,7 @@ package com.demo;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -71,6 +72,9 @@ public class LoginActivity extends AppCompatActivity implements RequestCallback,
         switch (view.getId()) {
             case R.id.btnLogin:
                 if (!Utils.isNetworkAvailable(LoginActivity.this)) {
+
+                    startActivity(new Intent(this, MainActivity.class));
+
                 } else if (!EmailSyntaxChecker.check("")) {
                 } else if (etPassword.getText().toString().length() < 3) {
                 } else {
@@ -95,7 +99,8 @@ public class LoginActivity extends AppCompatActivity implements RequestCallback,
         String email = "";//etLoginID.getText().toString().trim();
         String password = "";//etPassword.getText().toString().trim();
         String url ="";
-        new BaseService().callNetworkAPI(url, Commons.POST,"Login",toJsonObject(email,password).toString(),this);
+        new BaseService().callNetworkAPI(url, Commons.POST,
+                "Login",toJsonObject(email,password).toString(),this);
 
     }
     @Override
