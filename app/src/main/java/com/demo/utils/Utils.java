@@ -1,5 +1,10 @@
 package com.demo.utils;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.widget.Toast;
+
 import org.apache.http.HttpResponse;
 
 import java.io.BufferedReader;
@@ -85,6 +90,23 @@ public class Utils {
         }
         String str = sb.toString();
         return str;
+    }
+    /**
+     * Method For Show Message
+     */
+    public static void toast(Context context, String string) {
+
+        Toast toast = Toast.makeText(context, string, Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    /**
+     * For Check Internet Connection available or not
+     */
+    public static boolean isNetworkAvailable(Context mContext) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 }
