@@ -7,16 +7,14 @@
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:largeHeap="@bool/largeheap"
-        >
+        android:largeHeap="@bool/largeheap">
 
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
-            >
+            android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

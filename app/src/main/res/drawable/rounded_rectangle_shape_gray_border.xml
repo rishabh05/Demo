@@ -7,7 +7,7 @@
         android:color="@color/lightGrey" />
 
     <corners
-        android:Radius="@dimen/profile_textview_left_radius" />
+        android:radius="@dimen/profile_textview_left_radius" />
     <solid android:color="@color/white" />
 
 </shape>
