@@ -22,5 +22,6 @@
     <string name="PFCommonLogin">Login</string>
     <string name="CommonEnterAs">Enter as</string>
     <string name="CommonPassword">Password</string>
+    <string name="CommonForgotPassword">Forgot Password?</string>
 
 </resources>

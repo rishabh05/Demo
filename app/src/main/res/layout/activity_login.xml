@@ -91,6 +91,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rlEnterAs"
             android:layout_marginTop="@dimen/size40"
+            android:layout_marginLeft="@dimen/dim_padding10"
+            android:layout_marginRight="@dimen/dim_padding10"
             android:gravity="center"
             android:orientation="vertical"
             android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -113,16 +115,23 @@
                 android:id="@+id/tvOr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/edOldPassword"
-                android:layout_alignParentBottom="true"
-                android:layout_alignRight="@+id/edOldPassword"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:padding="@dimen/dim_padding15"
-                android:text=""
+                android:text="@string/CommonForgotPassword"
                 android:textColor="@color/white"
                 android:textSize="@dimen/dim_leftpanel_default_textsize_large"
                 android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvLblBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="hindi text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim_leftpanel_default_textsize_large"
+                android:visibility="visible" />
         </LinearLayout>
 
     </RelativeLayout>
