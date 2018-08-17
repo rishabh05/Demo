@@ -11,78 +11,85 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/size20"
         android:layout_marginBottom="@dimen/size20"
         android:layout_marginLeft="@dimen/dim_padding10"
         android:layout_marginRight="@dimen/dim_padding10"
+        android:layout_marginTop="@dimen/size20"
         android:background="@drawable/rounded_rectangle_shape">
 
         <ImageView
+            android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size20"
             android:gravity="center"
-            android:id="@+id/bizchat_logo"
             android:src="@drawable/ic_launcher_foreground" />
 
-        <LinearLayout
-            android:id="@+id/contaier"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/lblLogin"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/llout1"
+            android:layout_below="@+id/logo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="@dimen/size20"
             android:gravity="center"
+            android:text="@string/PFCommonLogin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/standard_text_size"/>
+
+        <RelativeLayout
+            android:id="@+id/rlEnterAs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/lblLogin"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/CommonEnterAs"
+            android:layout_margin="@dimen/size20"
             android:orientation="vertical"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin">
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/rounded_rectangle_shape_gray_border">
 
-
-            <EditText
-                android:id="@+id/edEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="5dp"
-                android:gravity="center_vertical"
-                android:hint="@string/CommonEmail"
-                android:inputType="textEmailAddress|textNoSuggestions"
-                android:textColor="@color/black">
-
-                <requestFocus />
-            </EditText>
-
-            <EditText
-                android:id="@+id/edPasswd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edEmail"
-                android:hint="@string/CommonPassword"
-                android:imeOptions="actionDone"
-                android:inputType="textPassword|textNoSuggestions"></EditText>
-
-
-            <TextView
-                android:id="@+id/tvForgetPasswd"
+            <ImageView
+                android:id="@+id/ivEnterAsIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/edOldPassword"
-                android:layout_alignParentBottom="true"
-                android:layout_alignRight="@+id/edOldPassword"
-                android:layout_marginTop="@dimen/dim_padding_5dp"
-                android:gravity="center"
-                android:padding="@dimen/dim_padding_5dp"
-                android:text="@string/PFCommonForgotPassword"
-                android:textColor="@color/white"
-                android:textSize="@dimen/dim_leftpanel_default_textsize_small" />
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_thread">
 
-        </LinearLayout>
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvEnterAs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivEnterAsIcon"
+                android:layout_toLeftOf="@+id/ivUpDownIcon"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/dim_padding5"
+                android:paddingRight="@dimen/dim_padding5"
+                android:layout_marginLeft="@dimen/dim_padding10"
+                android:text="Enter ss"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/standard_text_size" />
+
+            <ImageView
+                android:id="@+id/ivUpDownIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/show_more">
+
+            </ImageView>
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/buttonLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/contaier"
+            android:layout_below="@+id/rlEnterAs"
             android:layout_marginTop="@dimen/size40"
             android:gravity="center"
             android:orientation="vertical"
