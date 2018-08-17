@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <resources>
     <string name="app_name">Demo</string>
-    //Constant Strings======
 
-    //remove below two later after using from constants
-    <string name="chat_99more">99+</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
 
     <string name="PFStartTourStartTourMob">Start Tour</string>
     // TourActivity
@@ -24,4 +23,16 @@
     <string name="CommonPassword">Password</string>
     <string name="CommonForgotPassword">Forgot Password?</string>
 
+    <string name="CommonSDM">SDM</string>
+    <string name="CommonOS">OS</string>
+    <string name="CommonASM">ASM</string>
+
+    <string name="PleaseWait">Please wait...</string>
+
+    <string name="TabHome">Home</string>
+    <string name="TabAddShop">Add Shop</string>
+    <string name="TabVisitedShop">Total Visited Shop</string>
+    <string name="TabLeaveRequest">Leave Request</string>
+    <string name="TabSocialMedia">Social Media</string>
+    <string name="TabAboutPatanjali">About Patanjali</string>
 </resources>

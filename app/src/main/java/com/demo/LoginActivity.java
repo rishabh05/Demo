@@ -1,12 +1,16 @@
 package com.demo;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.PopupMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.demo.utils.BaseService;
@@ -19,17 +23,50 @@ import com.demo.utils.Utils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class LoginActivity extends AppCompatActivity implements RequestCallback{
+public class LoginActivity extends AppCompatActivity implements RequestCallback, View.OnClickListener{
     private EditText etLoginID, etPassword;
     private Button btnLogin;
     private ProgressDialog progress;
+    private TextView tvEnterAs;
+    private ImageView ivUpDownIcon;
+    private Context mContext;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        mContext = this;
+        init();
     }
 
+    private void init(){
+        tvEnterAs = (TextView)findViewById(R.id.tvEnterAs);
+        ivUpDownIcon = (ImageView)findViewById(R.id.ivUpDownIcon);
+
+        tvEnterAs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivUpDownIcon.setImageResource(R.drawable.show_less);
+
+                //Creating the instance of PopupMenu
+                PopupMenu popup = new PopupMenu(mContext, tvEnterAs);
+                //Inflating the Popup using xml file
+                popup.getMenuInflater().inflate(R.menu.menu_enteras, popup.getMenu());
+                //registering popup with OnMenuItemClickListener
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        tvEnterAs.setText(item.getTitle());
+                        ivUpDownIcon.setImageResource(R.drawable.show_more);
+                        return true;
+                    }
+                });
+                //showing popup menu
+                popup.show();
+            }
+        });
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnLogin:
@@ -38,8 +75,8 @@ public class LoginActivity extends AppCompatActivity implements RequestCallback{
                 } else if (etPassword.getText().toString().length() < 3) {
                 } else {
                     progress = new ProgressDialog(this);
-                    progress.setTitle("Loading");
-                    progress.setMessage("Please wait...");
+                    progress.setTitle("");
+                    progress.setMessage(getResources().getString(R.string.PleaseWait));
                     progress.setCancelable(false);
                     progress.show();
                     checkLogin();

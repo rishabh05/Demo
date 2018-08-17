@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim_padding10"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivHeaderLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_thread">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_thread">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivHomeTabIcon"
+            android:gravity="left|center_vertical"
+            android:padding="@dimen/dim_padding5"
+            android:layout_marginLeft="@dimen/dim_padding10"
+            android:text="@string/TabHome"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/standard_text_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tabHomRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_padding10"
+        android:padding="@dimen/dim_padding10">
+
+        <ImageView
+            android:id="@+id/ivHomeTabIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_thread">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvHomeTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivHomeTabIcon"
+            android:gravity="left|center_vertical"
+            android:padding="@dimen/dim_padding5"
+            android:layout_marginLeft="@dimen/dim_padding10"
+            android:text="@string/TabHome"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/standard_text_size" />
+    </RelativeLayout>
+
+    <!--Add shop-->
+    <RelativeLayout
+        android:id="@+id/tabAddShopRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_padding10"
+        android:padding="@dimen/dim_padding10">
+
+        <ImageView
+            android:id="@+id/ivAddShopTabIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_thread">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvAddShopTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivAddShopTabIcon"
+            android:gravity="left|center_vertical"
+            android:padding="@dimen/dim_padding5"
+            android:layout_marginLeft="@dimen/dim_padding10"
+            android:text="@string/TabAddShop"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/standard_text_size" />
+    </RelativeLayout>
+
+    <!-- Total visited shop-->
+    <RelativeLayout
+        android:id="@+id/tabVisitedShopRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_padding10"
+        android:padding="@dimen/dim_padding10">
+
+        <ImageView
+            android:id="@+id/ivVisitedShopTabIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_thread">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvVisitedShopTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivVisitedShopTabIcon"
+            android:gravity="left|center_vertical"
+            android:padding="@dimen/dim_padding5"
+            android:layout_marginLeft="@dimen/dim_padding10"
+            android:text="@string/TabVisitedShop"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/standard_text_size" />
+    </RelativeLayout>
+
+    <!-- Leave request-->
+    <RelativeLayout
+        android:id="@+id/tabLeaveReqRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_padding10"
+        android:padding="@dimen/dim_padding10">
+
+        <ImageView
+            android:id="@+id/ivLeaveReqTabIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_thread">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvLeaveReqTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivLeaveReqTabIcon"
+            android:gravity="left|center_vertical"
+            android:padding="@dimen/dim_padding5"
+            android:layout_marginLeft="@dimen/dim_padding10"
+            android:text="@string/TabLeaveRequest"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/standard_text_size" />
+    </RelativeLayout>
+
+    <!-- Social Media-->
+    <RelativeLayout
+        android:id="@+id/tabSocialMediaRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_padding10"
+        android:padding="@dimen/dim_padding10">
+
+        <ImageView
+            android:id="@+id/ivSocialMediaTabIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_thread">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvSocialMediaTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivSocialMediaTabIcon"
+            android:gravity="left|center_vertical"
+            android:padding="@dimen/dim_padding5"
+            android:layout_marginLeft="@dimen/dim_padding10"
+            android:text="@string/TabSocialMedia"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/standard_text_size" />
+    </RelativeLayout>
+
+    <!-- Social Media-->
+    <RelativeLayout
+        android:id="@+id/tabAboutPatantaliRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_padding10"
+        android:padding="@dimen/dim_padding10">
+
+        <ImageView
+            android:id="@+id/ivAboutPatantaliTabIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_thread">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvAboutPatantaliTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivAboutPatantaliTabIcon"
+            android:gravity="left|center_vertical"
+            android:padding="@dimen/dim_padding5"
+            android:layout_marginLeft="@dimen/dim_padding10"
+            android:text="@string/TabAboutPatanjali"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/standard_text_size" />
+    </RelativeLayout>
+</LinearLayout>
