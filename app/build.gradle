@@ -1,0 +1,74 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.google.gms:google-services:4.0.1'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    google()
+}
+
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.patanjalidemo"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.2.13"
+        multiDexEnabled = true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    dexOptions {
+//        incremental true
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+//        project.tasks.withType(com.android.build.gradle.tasks.Dex) {
+        additionalParameters = ['--core-library']
+        //      }
+    }
+}
+
+
+
+dependencies {
+    compile 'com.google.android.gms:play-services-maps:15.0.1'
+    compile 'com.google.android.gms:play-services-identity:15.0.1'
+    compile 'com.google.android.gms:play-services-plus:15.0.1'
+    compile 'com.google.android.gms:play-services-gcm:15.0.1'
+    compile 'com.google.android.gms:play-services-auth:15.0.1'
+    compile 'com.googlecode.android-query:android-query:0.25.9'
+//    compile 'com.nhaarman.listviewanimations:lib-core:3.1.0@aar'
+//    compile 'com.nhaarman.listviewanimations:lib-manipulation:3.1.0@aar'
+//    compile 'com.nhaarman.listviewanimations:lib-core-slh:3.1.0@aar'
+    compile 'com.android.support:multidex:1.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    compile 'com.android.support:appcompat-v7:27.1.0'
+    compile 'com.android.support:design:27.1.0'
+    compile 'com.android.support:recyclerview-v7:27.1.0'
+    compile 'com.android.support:support-v4:27.1.0'
+    compile 'com.android.support:cardview-v7:27.1.0'
+
+    compile 'org.jsoup:jsoup:1.8.3'
+}
+

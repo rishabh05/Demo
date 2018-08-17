@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/skipempty"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="false"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llout1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/connectlogo"
+                android:layout_marginTop="@dimen/size30"
+                android:gravity="bottom|center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:id="@+id/bizchat_logo"
+                    android:src="@drawable/ic_doc_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contaier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llout1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+
+                <EditText
+                    android:id="@+id/edEmail"
+                    style="@style/LoginRegStyleNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/CommonEmail"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    android:textColor="@color/black">
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edPasswd"
+                    style="@style/LoginRegStyleNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edEmail"
+                    android:hint="@string/CommonPassword"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword|textNoSuggestions"></EditText>
+
+
+                <TextView
+                    android:id="@+id/tvForgetPasswd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/edOldPassword"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/edOldPassword"
+                    android:layout_marginTop="@dimen/dim_padding_5dp"
+                    android:gravity="center"
+                    android:padding="@dimen/dim_padding_5dp"
+                    android:text="@string/PFCommonForgotPassword"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dim_leftpanel_default_textsize_small" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contaier"
+                android:layout_marginTop="@dimen/size40"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/round_btn_drawable_white"
+                    android:text="@string/PFCommonLogin"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dim_leftpanel_default_textsize_large" />
+
+                <TextView
+                    android:id="@+id/tvOr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/edOldPassword"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/edOldPassword"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="@dimen/dim_padding15"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dim_leftpanel_default_textsize_large"
+                    android:visibility="gone" />
+
+                &lt;!&ndash;<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">&ndash;&gt;
+
+                <Button
+                    android:id="@+id/ivGlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnLogin"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_button_google"
+                    android:drawableLeft="@drawable/google_new"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:scaleType="fitXY"
+                    android:text="@string/CommonGooglePlusMob"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dim_leftpanel_default_textsize_large" />
+
+                <Button
+                    android:id="@+id/ivFlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivGlogin"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_button_facebook"
+                    android:drawableLeft="@drawable/facebook_new"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:scaleType="fitXY"
+                    android:text="@string/CommonFacebookMob"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dim_leftpanel_default_textsize_large" />
+
+
+
+                &lt;!&ndash;</LinearLayout>&ndash;&gt;
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/buttonLayout"
+                android:gravity="bottom"
+                android:padding="@dimen/dim_padding10">
+
+                <TextView
+                    android:id="@+id/tvCopyRightDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/PFCommonTermsAndPolicyMob"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dim_leftpanel_default_textsize_small" />
+            </LinearLayout>
+            &lt;!&ndash;<View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"></View>&ndash;&gt;
+        </RelativeLayout>
+    </ScrollView>-->
+
+    <com.eworkplaceapps.ed.view.ProgressWheel
+        android:id="@+id/loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        wheel:matProg_barColor="@color/lightGrey"
+        wheel:matProg_progressIndeterminate="true" />
+</RelativeLayout>

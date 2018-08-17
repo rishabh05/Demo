@@ -1,0 +1,26 @@
+<resources>
+    <!--Login Set password-->
+    <dimen name="dim40">65dp</dimen>
+    <dimen name="dim100">90dp</dimen>
+    <dimen name="dim25">40dp</dimen>
+    <dimen name="dim220">300dp</dimen>
+    <dimen name="dim50">100dp</dimen>
+
+    <!--Login / signup / invited set pwd-->
+    <dimen name="bottomLinePaddingTop">10dp</dimen>
+    <dimen name="bottomLineMarginTop">80dp</dimen>
+    <dimen name="size15">40dp</dimen>
+    <dimen name="size20">53dp</dimen>
+    <dimen name="size25">67dp</dimen>
+    <dimen name="size30">80dp</dimen>
+    <dimen name="size40">107dp</dimen>
+    <dimen name="sizesp">40sp</dimen>
+    <dimen name="sizesp13">38sp</dimen>
+    <dimen name="chat_row_height">108dp</dimen>
+    <dimen name="task_status_button_padding_top">6dp</dimen>
+    <dimen name="task_status_button_padding">8dp</dimen>
+    <dimen name="status_dropdown_padding_top">10dp</dimen>
+
+
+    <dimen name="start_tour_logo_margin_top_bottom">88dp</dimen>
+</resources>

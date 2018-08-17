@@ -1,0 +1,15 @@
+<resources>
+
+    <!--Login / signup / invited set pwd-->
+
+    <dimen name="bottomLineMarginTop">40dp</dimen>
+    <dimen name="bottomLinePaddingTop">50dp</dimen>
+    <dimen name="size15">20dp</dimen>
+    <dimen name="size20">27dp</dimen>
+    <dimen name="size25">33dp</dimen>
+    <dimen name="size30">40dp</dimen>
+    <dimen name="size40">53dp</dimen>
+    <dimen name="sizesp">20sp</dimen>
+    <dimen name="sizesp13">18sp</dimen>
+
+</resources>
